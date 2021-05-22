@@ -1,10 +1,22 @@
 import React from 'react';
-
-
-let Player = ()=>{
+import "./css/Player.css";
+import Sidebar from './Sidebar';
+import Body from './Body';
+import Footer from './Footer';
+let Player = ({ spotify })=>{
     return (
         <React.Fragment>
-            <h1>Welcome to player</h1>
+            <div className="player">
+                <div className="player_body">
+                    {/* SideBar */}
+                    <Sidebar/>
+                    {/* Body */}
+                    <Body spotify={spotify}/>
+                </div>
+
+                {/* Footer */}
+                <Footer/>
+            </div>
         </React.Fragment>
     );
 }

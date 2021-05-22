@@ -5,7 +5,8 @@ let Login = ()=>{
     return (
         <React.Fragment>
             <div className="login">
-                <img src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg" alt="Spotify Banner"/>
+                <img src="https://www.scdn.co/i/_global/twitter_card-default.jpg" alt="Spotify Banner"/>
+                <h2>Spotify</h2>
                 <a href={loginurl}>Login with Spotify</a>
             </div>
         </React.Fragment>

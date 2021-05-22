@@ -31,6 +31,14 @@ function App() {
           user:user
         });
       });
+
+      spotify.getUserPlaylists().then((playlists)=>{
+        dispatch({
+          type:"SET_PLAYLISTS",
+          playlists:playlists,
+        });
+      });
+
     }
   }, []);
 
@@ -41,7 +49,7 @@ function App() {
 
     {/* Start Check User logged In or not */}
 
-    {token?(<Player/>):(<Login/>)}
+    {token?(<Player spotify={spotify}/>):(<Login/>)}
 
     {/* End */}
       
